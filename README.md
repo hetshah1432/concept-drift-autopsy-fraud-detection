@@ -162,25 +162,6 @@ jupyter notebook notebooks/concept-drift-autopsy-fraud-detection.ipynb
 
 ---
 
-## 📦 Requirements
-
-```txt
-pandas>=1.5.0
-numpy>=1.23.0
-matplotlib>=3.6.0
-seaborn>=0.12.0
-scipy>=1.9.0
-scikit-learn>=1.1.0
-xgboost>=1.7.0
-shap>=0.41.0
-river>=0.15.0
-tqdm>=4.64.0
-ipywidgets>=8.0.0
-jupyter>=1.0.0
-```
-
----
-
 ## 🎓 Academic Relevance
 
 This project touches on active research areas in:
