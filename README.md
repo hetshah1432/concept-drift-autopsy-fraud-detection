@@ -111,7 +111,7 @@ ADWIN Detection       →  ⚡ ACTIVE     (Hundreds of micro-drift events)
 ## 📈 Visualizations
 
 ### Final Dashboard
-![Final Dashboard]()
+![Final Dashboard](outputs/output.png)
 
 > *9-panel autopsy dashboard covering fraud rate trends, AUC degradation, PSI heatmaps, ADWIN events, SHAP drift, and mitigation results.*
 
@@ -154,7 +154,7 @@ train_identity.csv
 
 ### 4. Run the Notebook
 ```bash
-jupyter notebook notebooks/Project.ipynb
+jupyter notebook notebooks/concept-drift-autopsy-fraud-detection.ipynb
 ```
 
 ---
