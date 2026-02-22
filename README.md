@@ -50,39 +50,42 @@ This project investigates all three fundamental types of concept drift:
 ## 🛠️ Methodology
 
 ```
-                                                    Raw Data (590K transactions)
-                                                               │
-                                                               ▼
-                                                    ┌─────────────────────┐
-                                                    │  Temporal Binning   │  → Monthly windows over 6 months
-                                                    └─────────────────────┘
-                                                               │
-                                                               ▼
-                                                    ┌─────────────────────┐
-                                                    │  Reference Model    │  → XGBoost trained on early months
-                                                    │  (XGBoost)          │
-                                                    └─────────────────────┘
-                                                               │
-                                                            ┌──┴──────────────────────────────────┐
-                                                            ▼                                     ▼
-                                                     ┌──────────────┐                  ┌─────────────────────┐
-                                                     │  Statistical │                  │   Online Detection  │
-                                                     │  Drift Tests │                  │   (ADWIN via River) │
-                                                     │  KS + PSI    │                  └─────────────────────┘
-                                                     └──────────────┘
-                                                            │
-                                                            ▼
-                                                 ┌──────────────────────┐
-                                                 │  SHAP Explanation    │  → Feature importance drift over time
-                                                 │  Drift Analysis      │
-                                                 └──────────────────────┘
-                                                            │
-                                                            ▼
-                                                 ┌──────────────────────┐
-                                                 │  Drift Mitigation    │  → Sliding window retraining
-                                                 │  + Comparison        │
-                                                 └──────────────────────┘
+Raw Data (590K transactions)
+        │
+        ▼
+┌─────────────────────┐
+│  Temporal Binning   │  → Monthly windows over 6 months
+└─────────────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│  Reference Model    │  → XGBoost trained on early months
+│  (XGBoost)          │
+└─────────────────────┘
+        │
+     ┌──┴──────────────────────────────────┐
+     ▼                                     ▼
+┌──────────────┐                  ┌─────────────────────┐
+│  Statistical │                  │   Online Detection  │
+│  Drift Tests │                  │   (ADWIN via River) │
+│  KS + PSI    │                  └─────────────────────┘
+└──────────────┘
+     │
+     ▼
+┌──────────────────────┐
+│  SHAP Explanation    │  → Feature importance drift over time
+│  Drift Analysis      │
+└──────────────────────┘
+     │
+     ▼
+┌──────────────────────┐
+│  Drift Mitigation    │  → Sliding window retraining
+│  + Comparison        │
+└──────────────────────┘
 ```
+
+---
+
 
 ---
 
